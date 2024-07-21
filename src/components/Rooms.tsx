@@ -27,7 +27,7 @@ export const Rooms: FC = () => {
             <Room key={room.id} id={room.id} name={room.name} price={room.price} />
           )
         )}
-      <div className='flex justify-between w-1/3'>
+      <div className='flex justify-between w-2/3'>
         <div className='flex gap-2'>
           <button disabled={page < 2} onClick={() => setPage((prev) => prev - 1)}>
             Previous
