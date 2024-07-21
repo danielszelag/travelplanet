@@ -2,9 +2,9 @@ import { FC, useState } from 'react'
 import { Room, IRoom } from './Room'
 import { useQuery } from '@tanstack/react-query'
 import { getRooms } from '../api/getRooms'
+import { ROOMS_PER_PAGE } from '../data/constants'
 
 export const Rooms: FC = () => {
-  const ROOMS_PER_PAGE = 4
   const [page, setPage] = useState(1)
   const [sortedBy, setSortedBy] = useState('price')
   const { isPending, isError, data } = useQuery({ queryKey: ['rooms'], queryFn: getRooms })
@@ -12,7 +12,7 @@ export const Rooms: FC = () => {
   if (isPending) return 'Loading...'
   if (isError) return 'Error!'
   return (
-    <div className='w-screen h-screen flex flex-col items-center justify-center bg-red-100 gap-2'>
+    <div className='w-screen h-screen flex flex-col items-center justify-center gap-5'>
       {data
         .slice(page * ROOMS_PER_PAGE - ROOMS_PER_PAGE, page * ROOMS_PER_PAGE)
         .sort((a: IRoom, b: IRoom) => {
