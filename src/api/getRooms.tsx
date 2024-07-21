@@ -1,4 +1,4 @@
 export const getRooms = async () => {
-  const response = await fetch('https://dcontent.inviacdn.net/shared/dev/test-api/rooms')
+  const response = await fetch(import.meta.env.VITE_ROOMS_ENDPOINT)
   return await response.json()
 }
