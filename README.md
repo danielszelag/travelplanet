@@ -14,8 +14,8 @@ company. The application utilizes the Vite build tool and React library.
 git clone [repo_url]
 ```
 
-**Important:** In order to use the App, create a file named `.env` and provide variables called
-VITE_ROOMS_ENDPOINT and VITE_AVAILABILITY_ENDPOINT
+**Important: In order to use the App, create a file named `.env` and provide variables called
+VITE_ROOMS_ENDPOINT and VITE_AVAILABILITY_ENDPOINT**
 
 ```bash
 npm install
